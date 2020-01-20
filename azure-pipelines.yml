@@ -19,6 +19,7 @@ resources:
     type: GitHub
     connection: GHConnect
     source: RoopeshNair/nodeApp
+    ref: refs/heads/master
 
 stages:
 - stage: Deploy
