@@ -15,10 +15,11 @@ variables:
 
 resources:
   repositories:
-  - repository: GHConnect   
+  - repository: 'GHConnect'   
     type: GitHub
-    source: RoopeshNair/nodeApp
-    ref: refs/heads/master
+    connection: '3121f8f4-e7d6-47f6-855d-299414956cba'
+    source: 'RoopeshNair/nodeApp'
+    ref: 'refs/heads/master'
 
 stages:
 - stage: Deploy
