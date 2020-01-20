@@ -17,7 +17,6 @@ resources:
   repositories:
   - repository: GHConnect   
     type: GitHub
-    connection: GHConnect
     source: RoopeshNair/nodeApp
     ref: refs/heads/master
 
