@@ -15,10 +15,10 @@ variables:
 
 resources:
   repositories:
-  - repository: 'GHConnect'   
+  - repository: secondaryRepo      
     type: GitHub
     connection: '3121f8f4-e7d6-47f6-855d-299414956cba'
-    source: 'RoopeshNair/nodeApp'
+    source: RoopeshNair/nodeApp
     ref: 'refs/heads/master'
 
 stages:
@@ -35,4 +35,4 @@ stages:
         deploy:
           steps:            
           - checkout: self
-          - checkout: GHConnect
+          - checkout: secondaryRepo
