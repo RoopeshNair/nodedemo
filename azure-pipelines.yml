@@ -17,7 +17,7 @@ resources:
   repositories:
   - repository: secondaryRepo      
     type: GitHub
-    connection: '3121f8f4-e7d6-47f6-855d-299414956cba'
+    connection: 'GHConnect'
     source: RoopeshNair/nodeApp
     ref: 'refs/heads/master'
 
