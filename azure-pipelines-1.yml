@@ -13,7 +13,24 @@ jobs:
     var: Hello 
   environment: VMQA.ronaipc
   strategy:
-    runOnce:    
-      deploy:
+    rolling:
+      maxParallel: 1
+      preDeploy:        
         steps:
-        - script: echo hello world $(var)
+        - script: echo preDeploy $(var)
+      deploy:          
+        steps:
+        - script: echo deploy $(var)
+      routeTraffic:         
+        steps:
+        - script: echo route traffic $(var)        
+      postRouteTraffic:          
+        steps:
+        - script: echo post route traffic $(var)
+      on:
+        failure:         
+          steps:
+          - script: echo failure $(var)
+        success:          
+          steps:
+          - script: echo success $(var)
