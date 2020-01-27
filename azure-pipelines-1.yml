@@ -28,6 +28,7 @@ jobs:
         - script: echo preDeploy $(var)
       deploy:          
         steps:
+        - checkout: self
         - checkout: jsSample
         - script: echo deploy $(var)
       routeTraffic:         
