@@ -9,6 +9,7 @@ resources:
       type: GitHub
       name: RoopeshNair/pipelines-javascript
       ref: refs/heads/master
+      endpoint: GHConnect 
   
 trigger:
 - master
