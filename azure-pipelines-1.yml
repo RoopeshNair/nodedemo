@@ -19,7 +19,10 @@ jobs:
   displayName: deployWeb  # friendly name to display in the UI
   variables: 
     var: Hello 
-  environment: VMQA.ronaipc
+  environment: 
+    name:  VMQA
+    resourceType: VirtualMachine
+    tags: web
   strategy:
     rolling:
       maxParallel: 1
