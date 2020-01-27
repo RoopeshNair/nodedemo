@@ -3,6 +3,13 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+resources:
+  repositories:
+    - repository: jsSample
+      type: GitHub
+      name: RoopeshNair/pipelines-javascript
+      ref: refs/heads/master
+  
 trigger:
 - master
 
@@ -20,6 +27,7 @@ jobs:
         - script: echo preDeploy $(var)
       deploy:          
         steps:
+        - download: jsSample
         - script: echo deploy $(var)
       routeTraffic:         
         steps:
